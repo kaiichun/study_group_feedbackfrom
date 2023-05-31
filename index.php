@@ -14,6 +14,12 @@
 
     if ( isset( $path ) ) {
         switch( $path ) {
+            case 'auth/login':
+                require "includes/auth/login.php";
+                break;
+            case 'auth/signup':
+                require "includes/auth/signup.php";
+                break;
             case 'form/submit':
                 require 'includes/form/submit.php';
                 break;
@@ -22,6 +28,15 @@
                 break;
             case 'results':
                 require 'pages/results.php';
+                break;
+            case 'login':
+                require 'pages/login.php';
+                break;
+            case 'signup':
+                require 'pages/signup.php';
+                break;
+            case 'logout': 
+                require "pages/logout.php";
                 break;
             default:
                 require 'pages/home.php';

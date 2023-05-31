@@ -24,8 +24,10 @@
                     class="form-control" 
                     id="name" 
                     name="name" 
-                    placeholder="Enter your name"
+                    placeholder=" <?= $_SESSION['user']['name']?>" 
+                    disabled readonly
                     >
+                   
             </div>
             <div class="col">
                 <label for="email" class="form-label fw-bold">Email</label>
@@ -34,12 +36,12 @@
                     class="form-control" 
                     id="email" 
                     name="email" 
-                    placeholder="Enter your email"
+                    placeholder="<?= $_SESSION['user']['email']?>"
+                    disabled readonly
                     >
             </div>
         </div>
     </div>
-
     <!-- Loop through all the questions -->
     <?php if ( isset( $questions ) ) : ?>
         <?php foreach( $questions as $index => $question ) : ?>
